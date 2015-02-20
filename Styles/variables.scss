@@ -1,0 +1,38 @@
+//*************************
+//*******FUNCTIONS*********
+//*************************
+
+@mixin transition($second){
+	-webkit-transition:all $second ease-in-out;
+	-moz-transition:all $second ease-in-out;
+	-o-transition:all $second ease-in-out;
+	-ms-transition: all $second ease;  
+	transition:all $second ease-in-out;
+}
+
+//*************************
+//*******VARIABLES*********
+//*************************
+
+$hugeFont:4.5em;
+$veryBigFont:3em;
+$bigFont:2.5em;
+$mediumFont:2em;
+$smallFont:1.5em;
+$littleFont:1.2em;
+$standardFont:1em;
+$veryLittleFont:0.8em;
+
+//*************************
+//********COULEURS*********
+//*************************
+
+$orange:#eb6d20;
+
+//*************************
+//*********CLASSES*********
+//*************************
+
+.texteOrange{
+	color:$orange;
+}
