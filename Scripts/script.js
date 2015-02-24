@@ -1,7 +1,9 @@
 $(document).ready(function() {
 
-  var hauteurFenetre = $(window).height();	
+  var hauteurFenetre = $(window).height();
+  var largeurFenetre = $(window).height();	
   $( ".backgroundContenu" ).css( "height", hauteurFenetre);
+  $( ".blocTitre" ).css( "left", - largeurFenetre);
   $( ".blocContenu" ).css( "height", hauteurFenetre-180);
   $( ".blocContenuFilm" ).css( "bottom", - hauteurFenetre);
   $( ".blocFilm" ).css( "top", hauteurFenetre/4.5);
@@ -20,6 +22,8 @@ setTimeout(function() {
       		$( ".blocContenuFilm" ).css( "bottom", "0px" );
       			setTimeout(function() {
       				$( ".blocVideo" ).css( "width", "50%" );
+      				$( ".blocVideo" ).css( "padding", "0.8%" );
+      				$( "iframe" ).css( "opacity", "1" );
       					setTimeout(function() {
       						$( ".blocVote" ).css( "width", "14%" );
 						}, 600);

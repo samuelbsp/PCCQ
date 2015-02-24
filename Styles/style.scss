@@ -69,6 +69,7 @@ header{
 		background-opacity:0.7;
 		background-repeat:repeat-x;
 		background-size:100% 100%;
+		float:right;
 
 		.logoHeader{
 			width:20%;
@@ -82,19 +83,19 @@ header{
 			width:80%;
 			float:right;
 			padding:22px 0;
+			text-align:right;
 
 			li{
-				display:inline;
+				display:inline-block;
 				color:white;
 				font-size:1.5em;
 				margin-right:4%;
-				float:right;
 				font-weight:1;
 				font-size:$littleFont;
 				font-family: 'bebas_neueregular';
 				@include transition(300ms);
 			}
-			li:first-child{
+			li:last-child{
 				margin-right:0%;
 			}
 			li:hover{
@@ -526,13 +527,12 @@ footer{
 /*/==============/*/
 #backgroundPageFilm1{background-image:url(Images/imgAccueil.jpg);}
 .blocFilm{
-	height:400px;
+	min-height:800px;
 	width:93%;
 	position:relative;
 	top:150px;
 	left:7%;
 	.blocTitre{
-		left:-800px;
 		width:30%;
 		height:60px;
 		margin-left:9%;
@@ -547,12 +547,13 @@ footer{
 	}
 	.blocContenuFilm{
 		width:30%;
-		min-height:490px;
-		height:auto;
+		height:460px;
 		padding:30px 2%;
 		background-color:white;
 		float:left;
 		position:relative;
+		font-size:$standardFont;
+		overflow-y:auto;
 		@include transition(300ms);
 		.blocInfoFilm{
 			width:100%;
@@ -570,7 +571,14 @@ footer{
 		height:400px;
 		float:left;
 		overflow:hidden;
+		padding:0;
 		@include transition(300ms);
+		iframe{
+			width:100%;
+			height:100%;
+			opacity:0;
+			@include transition(1000ms);
+		}
 	}
 	.blocVote{
 		width:0%;
@@ -579,10 +587,14 @@ footer{
 		background-color:$orange;
 		float:left;
 		overflow:hidden;
+		text-align:center;
 		@include transition(300ms);
 		.plus{
 			font-size:7em;
-			height:0.9em;
+			width:30%;
+			margin:30px 0 10px 0;
+			max-width:50px;
+			opacity:0.3;
 			font-family: 'PT Sans', sans-serif;
 			@include transition(500ms);
 		}
@@ -603,6 +615,7 @@ footer{
 			-ms-transform: rotate(90deg);
 			-webkit-transform: rotate(90deg);
 			transform: rotate(90deg);
+			opacity:1;
 			@include transition(500ms);
 		}
 	}
