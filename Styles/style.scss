@@ -1,3 +1,6 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic);
+@import url(font/font.css);
+
 @import 'reset';
 @import 'variables';
 
@@ -5,6 +8,13 @@
 	-webkit-box-sizing: border-box;
   	-moz-box-sizing: border-box; 
   	box-sizing: border-box;
+}
+/*/===========/*/
+/*/ GENERAL  /*/
+/*/=========/*/
+html{
+	width:100%;
+	height:100%;
 }
 h1,h2,h3{
 	font-family: 'bebas_neueregular';
@@ -31,12 +41,25 @@ p,a,li{
 	-webkit-transform: rotate(90deg);
 	transform: rotate(90deg);
 	@include transition(500ms);
-}	
+}
+.backgroundContenu{
+	width:100%;
+	height:997px;
+	background-size:cover;
+	background-position:center;
+	position:relative;
+	z-index:1;
+	overflow:hidden;
+}
+/*/===========/*/
+/*/ ACCUEIL  /*/
+/*/=========/*/	
 header{
-	height:500px;
+	height:997px;
 	width:100%;
 	background-image:url('Images/imgAccueil.jpg');
 	background-size:cover;
+	background-position:center;
 	
 	.blocNavigation{
 		width:100%;
@@ -64,7 +87,7 @@ header{
 				display:inline;
 				color:white;
 				font-size:1.5em;
-				margin-right:7%;
+				margin-right:4%;
 				float:right;
 				font-weight:1;
 				font-size:$littleFont;
@@ -86,7 +109,7 @@ header{
 		}
 	}
 	.blocTitre{
-		margin-top:90px;
+		margin-top:350px;
 		h1{
 			text-align:center;
 			color:white;
@@ -116,11 +139,11 @@ header{
 			margin-bottom:70px;
 			line-height:23pt;
 			font-size:$littleFont;
-
-			h2{
-				margin:40px 0;
-				font-size:$mediumFont;
-			}
+			padding:6% 0 !important;
+				h2{
+					margin:40px 0;
+					font-size:$mediumFont;
+				}
 		}
 		#paragrapheObjectif2{
 			p{
@@ -170,9 +193,6 @@ header{
 	}
 
 	.filmsNomines{
-		content:'';
-		clear:both;
-		display:block;
 		padding:6% 0 !important;
 	}
 	.films{
@@ -451,7 +471,9 @@ footer{
 		}
 	}
 }
-/*/CONTENU/*/
+/*/===========/*/
+/*/ CONTENU  /*/
+/*/=========/*/
 .headerContenu{
 	background-image:none;
 	height:90px;
@@ -471,22 +493,16 @@ footer{
 		}
 	}
 }
-.backgroundContenu{
-	width:100%;
-	height:700px;
+#backgroundPageContenu{
 	background-image:url(Images/imgAccueil.jpg);
-	background-size:100% 100%;
-	position:relative;
-	z-index:1;
-	overflow:hidden;
 }
 .blocContenu{
 	width:50%;
-	height:500px;
+	height:550px;
 	padding:20px 2%;
-	background-color:white;
+	background-color:rgba(255,255,255,0.8);
 	position:absolute;
-	bottom:-500px;
+	bottom:-550px;
 	left:5%;
 	z-index:2;
 	overflow-y:auto;
@@ -503,5 +519,91 @@ footer{
 	p{
 		line-height:20px;
 		font-size:$standardFont;
+	}
+}
+/*/================/*/
+/*/ CONTENU FILM  /*/
+/*/==============/*/
+#backgroundPageFilm1{background-image:url(Images/imgAccueil.jpg);}
+.blocFilm{
+	height:400px;
+	width:93%;
+	position:relative;
+	top:150px;
+	left:7%;
+	.blocTitre{
+		left:-800px;
+		width:30%;
+		height:60px;
+		margin-left:9%;
+		background-color:white;
+		padding:10px 2%;
+		position:relative;
+		@include transition(300ms);
+		h2{
+			font-size:$bigFont;
+			text-align:center;
+		}
+	}
+	.blocContenuFilm{
+		width:30%;
+		min-height:490px;
+		height:auto;
+		padding:30px 2%;
+		background-color:white;
+		float:left;
+		position:relative;
+		@include transition(300ms);
+		.blocInfoFilm{
+			width:100%;
+			height:auto;
+		}
+		.blocDescriptionFilm{
+			width:100;
+			height:auto;
+			margin-top:35px;
+		}
+	}
+	.blocVideo{
+		background-color:black;
+		width:0%;
+		height:400px;
+		float:left;
+		overflow:hidden;
+		@include transition(300ms);
+	}
+	.blocVote{
+		width:0%;
+		height:170px;
+		padding-top:5px;
+		background-color:$orange;
+		float:left;
+		overflow:hidden;
+		@include transition(300ms);
+		.plus{
+			font-size:7em;
+			height:0.9em;
+			font-family: 'PT Sans', sans-serif;
+			@include transition(500ms);
+		}
+		p{
+			font-size:$fuckingBigFont;
+			font-family: 'bebas_neueregular';
+			text-align:center;
+			color:rgba(255,255,255,0.3);
+			@include transition(500ms);
+		}
+	}
+	.blocVote:hover{
+		p{
+			color:rgba(255,255,255,1);
+			@include transition(500ms);
+		}
+		.plus{
+			-ms-transform: rotate(90deg);
+			-webkit-transform: rotate(90deg);
+			transform: rotate(90deg);
+			@include transition(500ms);
+		}
 	}
 }
