@@ -34,7 +34,7 @@ setTimeout(function() {
 function logoCentre(){
 
   $( "header" ).css( "height", hauteurFenetre);
-  var hauteurMargeLogo = $(window).height()/2- $( ".blocTitre" ).height()/2-80;
+  var hauteurMargeLogo = $(window).height()/2- $( ".blocTitre" ).height()/2;
   $( ".blocTitre" ).css( "margin-top", hauteurMargeLogo);
 }
 });	
