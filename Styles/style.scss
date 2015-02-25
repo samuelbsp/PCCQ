@@ -172,25 +172,19 @@ header{
 		float:right;
 		padding:20px 4%;
 		color:white;
-
-		#paragrapheObjectif1{
-			margin-bottom:70px;
-			line-height:23pt;
-			font-size:$littleFont;
-			padding:6% 0 !important;
-				h2{
-					margin:40px 0;
-					font-size:$mediumFont;
-				}
+		line-height:23pt;
+		font-size:$littleFont;
+		h2{
+			margin:40px 0;
+			font-size:$mediumFont;
 		}
-		#paragrapheObjectif2{
-			p{
+		ul{
+			margin-top:70px;
+			li{
 				margin:10px 0;
 				font-weight:bold;
-				font-size:$littleFont;
-
 			}
-			p:last-child{
+			li:last-child{
 				margin-bottom:0px;
 			}
 		}
