@@ -10,7 +10,7 @@ $(document).ready(function() {
 
 
   var monID;
-  $( ".menuPrincipal" ).hover(function() {
+  $( ".menu-item-has-children" ).hover(function() {
     monID= this.id;
     $( '#sous'+monID ).css( "max-height", "500px" );
   }, function() {

@@ -93,7 +93,7 @@ header{
 			font-size: inherit;
 			}
 
-			.menuPrincipal{
+			.menu-item-has-children{
 				display:inline-block;
 				position:relative;
 				color:white;
@@ -105,10 +105,10 @@ header{
 				font-family: 'bebas_neueregular';
 				@include transition(300ms);
 			}
-			.menuPrincipal:last-child{
+			.menu-item-has-children:last-child{
 				margin-right:0%;
 			}
-			.menuPrincipal:hover{
+			.menu-item-has-children:hover{
 				color:black;
 				position:relative;
 				background-color:white;
