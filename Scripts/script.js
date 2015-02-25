@@ -8,6 +8,15 @@ $(document).ready(function() {
   $( ".blocContenuFilm" ).css( "bottom", - hauteurFenetre);
   $( ".blocFilm" ).css( "top", hauteurFenetre/4.5);
 
+
+  var monID;
+  $( ".menuPrincipal" ).hover(function() {
+    monID= this.id;
+    $( '#sous'+monID ).css( "max-height", "500px" );
+  }, function() {
+    $( '#sous'+monID ).css( "max-height", "0px" );
+  });
+
 if($(".blocObjectif").length > 0) {
     logoCentre();
 }
