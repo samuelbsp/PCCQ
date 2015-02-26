@@ -9,13 +9,6 @@ $(document).ready(function() {
   $( ".blocFilm" ).css( "top", hauteurFenetre/4.5);
 
 
-  /*var monID;
-  $( ".menu-item-has-children" ).hover(function() {
-    monID= this.id;
-    $( '#sous'+monID ).css( "max-height", "500px" );
-  }, function() {
-    $( '#sous'+monID ).css( "max-height", "0px" );
-  });*/
   var monID;
   $( ".menu-item-has-children" ).hover(function() {
     monID= this.id;
@@ -48,8 +41,6 @@ setTimeout(function() {
 }, 100);
 
 function logoCentre(){
-
-  $( "header" ).css( "height", hauteurFenetre);
   var hauteurMargeLogo = $(window).height()/2- $( ".blocTitre" ).height()/2;
   $( ".blocTitre" ).css( "margin-top", hauteurMargeLogo);
 }
