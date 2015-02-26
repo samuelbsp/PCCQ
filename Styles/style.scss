@@ -72,6 +72,14 @@ header{
 		background-size:100% 100%;
 		float:right;
 
+		@media #{$tablet} {
+		}
+		@media #{$mobile} {
+	    	height:50px;
+		    background-image:none;
+		    background-color:black;
+		}
+
 		.logoHeader{
 			width:20%;
 			max-width:200px;
@@ -85,6 +93,10 @@ header{
 			float:right;
 			padding:0;
 			text-align:right;
+
+			@media #{$mobile} {
+	    		display:none;
+			}
 			
 			a {
 			color: inherit;

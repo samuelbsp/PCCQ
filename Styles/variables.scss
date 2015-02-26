@@ -37,3 +37,10 @@ $orange:#eb6d20;
 .texteOrange{
 	color:$orange;
 }
+
+//*************************
+//*********MEDIA***********
+//*************************
+
+$tablet: "(min-width: 0px) and (max-width: 1023px)";
+$mobile: "(min-width: 0px) and (max-width: 780px)";
