@@ -8,6 +8,36 @@ $(document).ready(function() {
   $( ".blocContenuFilm" ).css( "bottom", - hauteurFenetre);
   $( ".blocFilm" ).css( "top", hauteurFenetre/4.5);
 
+  var rotation = 0;
+
+jQuery.fn.rotate = function(degrees) {
+    $(this).css({
+      '-webkit-transform' : 'rotate('+ degrees +'deg)',
+      '-moz-transform' : 'rotate('+ degrees +'deg)',
+      '-ms-transform' : 'rotate('+ degrees +'deg)',
+      'transform' : 'rotate('+ degrees +'deg)'});
+    return $(this);
+};
+
+  var menuMobileOuvert=false;
+  $( ".burgerMobile" ).click(function() {
+    if(menuMobileOuvert==true){
+      $( ".navHeader" ).css( "max-height", "0px" );
+      $('.burgerMobile').rotate(0);
+      menuMobileOuvert=false;
+      setTimeout(function() {
+        $( ".navHeader" ).css( "display", "none" );
+      }, 500);
+    }
+    else{
+      $( ".navHeader" ).css( "display", "block" );
+      setTimeout(function() {
+        $( ".navHeader" ).css( "max-height", "500px" );
+        $('.burgerMobile').rotate(90);
+        menuMobileOuvert=true;
+      }, 100);
+    }
+  });
 
   var monID;
   $( ".menu-item-has-children" ).hover(function() {

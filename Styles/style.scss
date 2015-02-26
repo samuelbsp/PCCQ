@@ -61,6 +61,12 @@ p,a,li{
 	z-index:1;
 	overflow:hidden;
 }
+.bordureMobile{
+	height:1px;
+	width:70%;
+	margin:0 auto;
+	background-color:$orange;
+}
 /*/===========/*/
 /*/ ACCUEIL  /*/
 /*/=========/*/	
@@ -82,19 +88,29 @@ header{
 		background-size:100% 100%;
 		float:right;
 
-		@media #{$tablet} {
-		}
 		@media #{$mobile} {
-	    	height:50px;
+	    	height:80px;
 		    background-image:none;
-		    background-color:black;
+		    background-color:#141414;
+		    position:fixed;
+		    z-index:200;
 		}
 
 		.logoHeader{
-			width:20%;
-			max-width:200px;
-			height:65%;
+			width:150px;
 			margin-top:10px;
+			@media #{$mobile} {
+		    	margin-top:10px;
+			}
+		}
+		.burgerMobile{
+			display:none;
+			float:right;
+		   	width:50px;
+			@include transition(500ms);
+			@media #{$mobile} {
+		    	display:block;
+			}
 		}
 		.navHeader{
 			list-style:none;
@@ -103,18 +119,21 @@ header{
 			float:right;
 			padding:0;
 			text-align:right;
-
 			@media #{$mobile} {
-	    		display:none;
+	    		width:100%;
+	    		background-color:#141414;
+	    		height:auto;
+	    		max-height:0px;
+	    		diplay:none;
+	    		overflow:hidden;
+	    		@include transition(500ms);
 			}
-			
 			a {
 			color: inherit;
 			text-decoration: none;
 			font-weight: inherit;
 			font-size: inherit;
 			}
-
 			.menu-item-has-children{
 				display:inline-block;
 				position:relative;
@@ -126,6 +145,11 @@ header{
 				font-size:$littleFont;
 				font-family: 'bebas_neueregular';
 				@include transition(300ms);
+				@media #{$mobile} {
+	    			width:100%;
+	    			border:white;
+	    			text-align:center;
+				}
 			}
 			.menu-item-has-children:last-child{
 				margin-right:0%;
@@ -449,7 +473,7 @@ header{
 }
 .blocNouvellesFacebook{
 	width:100%;
-	height:300px;
+	height:auto;
 	background-color:white;
 	.blocTitreNouvellesFacebook{
 		display:none;
@@ -475,6 +499,7 @@ header{
 		padding:50px 4%;
 		@media #{$mobile} {
 		   	width:100%;
+		   	float:none;
 		   	height:auto;
 		   	display:block;
 		   	clear:both;
@@ -487,10 +512,6 @@ header{
 	}
 	.bordureMobile{
 		display:none;
-		height:1px;
-		width:70%;
-		margin:0 auto;
-		background-color:$orange;
 		@media #{$mobile} {
 		   	display:block;
 		   	clear:both;
@@ -500,6 +521,9 @@ header{
 .imgAvantFooter{
 	width:100%;
 	display:block;
+	@media #{$mobile} {
+		display:none;
+	}
 }
 footer{
 	.blocMenuFooter{
@@ -507,11 +531,22 @@ footer{
 		width:100%;
 		height:300px;
 		padding:30px 40px 0 40px;
+		@media #{$mobile} {
+		   	height:1050px;
+		}
 
 		.sectionMenu{
 			width:75%;
 			height:100%;
 			float:left;
+			@media #{$mobile} {
+		   		width:100%;
+		   		height:auto;
+		   		float:none;
+		   		display:block;
+		   		clear:both;
+		   		margin-bottom:20px;
+			}
 
 			a {
 				color: inherit;
@@ -519,7 +554,6 @@ footer{
 				font-weight: inherit;
 				font-size: inherit;
 			}
-
 			.listeMenuFooter{
 				width:100%;
 
@@ -531,6 +565,12 @@ footer{
 					color:$orange;
 					font-size:$smallFont;
 					font-family: 'bebas_neueregular';
+					@media #{$mobile} {
+		   				width:100%;
+		   				float:none;
+		   				display:block;
+		   				clear:both;
+					}
 					ul{
 						li{
 							font-size:0.7em;
@@ -547,11 +587,24 @@ footer{
 				}
 			}
 		}
+		.bordureMobile{
+			display:none;
+			@media #{$mobile} {
+		   		display:block;
+			}
+		}
 		.sectionInfoLettre{
 			width:25%;
 			height:100%;
 			float:left;
 			padding-left:3%;
+			@media #{$mobile} {
+		   		width:100%;
+		   		height:auto;
+		   		display:block;
+		   		float:none;
+		   		margin-top:70px;
+			}
 
 			h3{	
 				margin:10px 0;
@@ -559,6 +612,10 @@ footer{
 				color:$orange;
 				font-size:$smallFont;
 				font-family: 'bebas_neueregular';
+				@media #{$mobile} {
+		   			text-align:center;
+		   			margin-bottom:40px;
+				}
 			}
 			input{
 				padding:7px;
@@ -566,12 +623,18 @@ footer{
 				height:35px;
 				float:left;
 				border:0px;
+				@media #{$mobile} {
+		   			padding:25px 7px;
+				}
 			}
 			img{
 				width:20%;
 				height:35px;
 				float:left;
 				@include transition(300ms);
+				@media #{$mobile} {
+		   			height:50px;
+				}
 			}
 			img:hover{
 				opacity:0.7;
@@ -584,15 +647,33 @@ footer{
 		width:100%;
 		height:75px;
 		padding:33px 4%;
+		@media #{$mobile} {
+			height:125px;
+		}
 
 		.copyright{
 			float:left;
 			font-size:$veryLittleFont;
+			@media #{$mobile} {
+				width:100%;
+				display:block;
+				float:none;
+				text-align:center;
+				clear:both;
+				padding-top:20px;
+			}
 		}
 		.blocReseauSociaux{
 			float:right;
 			position:relative;
 			width:10%;
+			@media #{$mobile} {
+				width:20%;
+				float:none;
+		   		display:block;
+		   		margin:0 auto;
+		   		clear:both;
+			}
 
 			img{
 				position:relative;
@@ -601,7 +682,7 @@ footer{
 				float:right;
 				@include transition(300ms);
 			}
-			img:first-child{
+			a:first-child img{
 				margin-right:0%;
 			}
 			img:hover{
