@@ -513,9 +513,16 @@ footer{
 			height:100%;
 			float:left;
 
+			a {
+				color: inherit;
+				text-decoration: none;
+				font-weight: inherit;
+				font-size: inherit;
+			}
+
 			.listeMenuFooter{
 				width:100%;
-				
+
 				.menu-item-has-children{
 					float:left;
 					width:18%;
