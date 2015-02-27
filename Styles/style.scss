@@ -670,7 +670,7 @@ footer{
 		.blocReseauSociaux{
 			float:right;
 			position:relative;
-			width:10%;
+			width:15%;
 			@media #{$mobile} {
 				width:35%;
 				float:none;
@@ -684,6 +684,7 @@ footer{
 				bottom:7px;
 				margin-right:15%;
 				float:right;
+				width:15px;
 				@include transition(300ms);
 			}
 			a:first-child img{
