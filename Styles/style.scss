@@ -128,6 +128,7 @@ header{
 	    		diplay:none;
 	    		overflow:hidden;
 	    		@include transition(500ms);
+	    		overflow-y:scroll;
 			}
 			a {
 			color: inherit;
@@ -151,16 +152,24 @@ header{
 	    			width:100%;
 	    			border:white;
 	    			text-align:center;
+	    			padding:15px 0 0 0;
 				}
 			}
 			.menu-item-has-children:last-child{
 				margin-right:0%;
+				@media #{$mobile} {
+	    			padding:15px 0 15px 0;
+				}
 			}
 			.menu-item-has-children:hover{
 				color:black;
 				position:relative;
 				background-color:white;
 				@include transition(300ms);
+				@media #{$mobile} {
+					background-color:#141414;
+					color:white;
+				}
 
 				.texteOrange{
 					color:black;
@@ -178,16 +187,30 @@ header{
 				overflow:hidden;
 				background-color:rgba(255,255,255,0.8);
 				@include transition(500ms);
+				@media #{$mobile} {
+		    		position:relative;
+		    		display:block;
+		    		width:100%;
+		    		top:0px;
+		    		text-align:center;
+				}
 				li{
 					padding:15px 3% 15px 10%;
 					border-top:1px solid #d1d1d1;
 					border-bottom:1px solid #d1d1d1;
 					@include transition(300ms);
+					@media #{$mobile} {
+		    			width:100%;
+		    			padding:15px 0 15px 0;
+					}
 				}
 				li:hover{
 					background-color:$orange;
 					color:white;
 					@include transition(300ms);
+					@media #{$mobile} {
+		    			background-color:#141414;
+					}
 				}
 				li:first-child{border-top:0px;}
 				li:last-child{border-bottom:0px;}
@@ -672,7 +695,7 @@ footer{
 			position:relative;
 			width:15%;
 			@media #{$mobile} {
-				width:35%;
+				width:110px;
 				float:none;
 		   		display:block;
 		   		margin:0 auto;
@@ -684,7 +707,6 @@ footer{
 				bottom:7px;
 				margin-right:15%;
 				float:right;
-				width:15px;
 				@include transition(300ms);
 			}
 			a:first-child img{
