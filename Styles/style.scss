@@ -307,10 +307,6 @@ header{
 		right:60px;
 		float:left;
 	}
-
-	.filmsNomines{
-		padding:6% 0 !important;
-	}
 	.films{
 		width:33.33%;
 		height:330px;
@@ -331,9 +327,9 @@ header{
 		
 		.blocTitreFilms{
 			width:100%;
-			text-align:center;
-			height:70px;
-			top:0px;
+			text-align:center;		
+			top:50%;
+			transform:translateY(-50%);
 			text-transform: uppercase;
 			font-size:1.5em;
 			position:relative;
@@ -369,7 +365,7 @@ header{
 	}
 	.filmHover:hover{
 		.blocTitreFilms{
-			top:-40px;
+			top:-10%;
 			color:$orange;
 			@include transition(500ms);
 		}
