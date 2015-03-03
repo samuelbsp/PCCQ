@@ -62,7 +62,7 @@ if( largeurFenetre<=780 ) {
 }
 else{
     var monID;
-  $( ".menu-item-has-children" ).hover(function() {
+  $( ".blocNavigation .menu-item-has-children" ).hover(function() {
     monID= this.id;
     $( '#' + monID + ' .sub-menu' ).css( "max-height", "500px" );
   }, function() {
