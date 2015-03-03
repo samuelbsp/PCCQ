@@ -471,16 +471,14 @@ header{
 		position:absolute;
 		background-color:rgba(255,255,255,0.7);
 		width:60%;
-		height:200px;
 		right:0;
 		bottom:0;
-		padding:30px 4% 0 4%;
+		padding:30px 4% 50px;
 		@media #{$mobile} {
 		    display:block;
 		    width:100%;
-		    height:250px;
 		    background-color:white;
-		    padding:50px 4% 0 4%;
+		    padding:50px 4% 50px;
 		}
 
 		h3{
@@ -524,39 +522,38 @@ header{
         }
 
         img.avatar{
-					float: left;
-					margin-right: 15px;
-				}
+            float: left;
+            margin-right: 15px;
+        }
 
-				a{
-					text-decoration: none;
-				}
+        a{
+            text-decoration: none;
+        }
 
-				p.name a{
-					color: #000;
-					font-size: 0.875em;
-					text-transform: uppercase;
-				}
+        p.name a{
+            color: #000;
+            font-size: 0.875em;
+            text-transform: uppercase;
+        }
 
-				p a{
-					color:$orange;
-				}
+        p a{
+            color:$orange;
+        }
 
-				p.date{
-					font-size: $veryLittleFont;
-					color:#7b7b7b;
-				}
+        p.date{
+            font-size: $veryLittleFont;
+            color:#7b7b7b;
+        }
 
-				p.message{
-					margin-top: 40px;
-				}
+        p.message{
+            margin-top: 40px;
+        }
 
-				p.likes{
-					background: url(Styles/Images/jaime.png) no-repeat;
-					width: 133px;
-					height: 50px;
-					text-indent: -9999px;
-				}
+        .like{
+            width:133px;
+            position:absolute;
+            bottom:13px;
+        }
         
         p {
             font-size: $littleFont;
