@@ -340,14 +340,14 @@ header{
 			position:relative;
 			background-color:white;
 			width:45%;
-			bottom:-150px;
+			bottom:-250px;
 			@include transition(500ms);
 		}
 		.grandeSousBordure{
 			position:relative;
 			background-color:white;
 			width:50%;
-			bottom:-150px;
+			bottom:-250px;
 			@include transition(500ms);
 		}
 		.blocFonce{
@@ -390,11 +390,6 @@ header{
 		    background-color:black;
 		}
 	}
-	#bloc2{background-image:url(Styles/Images/nommes3indiens.jpg);}
-	#bloc3{background-image:url(Styles/Images/nommesTom.jpg);}
-	#bloc4{background-image:url(Styles/Images/nommesMirraculum.jpg);}
-	#bloc5{background-image:url(Styles/Images/nommesNicole.jpg);}
-	#bloc6{background-image:url(Styles/Images/nommesMommy.jpg);}
 }
 .sectionNomines:after{
 	content:'';
