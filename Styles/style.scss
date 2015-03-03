@@ -520,7 +520,7 @@ header{
 	.nouvellesFacebook {
         width: 50%;
         height: 100%;
-        float: left;
+        display:table-cell;
         position: relative;
         padding: 50px 4%;
         @media #{$mobile} {
