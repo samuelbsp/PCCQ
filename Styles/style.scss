@@ -517,25 +517,53 @@ header{
 			padding-top:50px;
 		}	
 	}
-	.nouvellesFacebook{
-		width:50%;
-		height:100%;
-		float:left;
-		position:relative;
-		padding:50px 4%;
-		@media #{$mobile} {
-		   	width:100%;
-		   	float:none;
-		   	height:auto;
-		   	display:block;
-		   	clear:both;
-		}
+	.nouvellesFacebook {
+        width: 50%;
+        height: 100%;
+        float: left;
+        position: relative;
+        padding: 50px 4%;
+        @media #{$mobile} {
+            width: 100%;
+            float: none;
+            height: auto;
+            display: block;
+            clear: both;
+        }
 
-		p{
-			font-size:$littleFont;
-			line-height:25px;
-		}
-	}
+        img.avatar{
+					float: left;
+					margin-right: 15px;
+				}
+
+				a{
+					text-decoration: none;
+				}
+
+				p.name a{
+					color: #000;
+					font-size: 0.875em;
+					text-transform: uppercase;
+				}
+
+				p a{
+					color:$orange;
+				}
+
+				p.date{
+					font-size: $veryLittleFont;
+					color:#7b7b7b;
+				}
+
+				p.message{
+					margin-top: 40px;
+				}
+        
+        p {
+            font-size: $littleFont;
+            line-height: 25px;
+        }
+    }
 	.bordureMobile{
 		display:none;
 		@media #{$mobile} {
@@ -543,7 +571,7 @@ header{
 		   	clear:both;
 		}
 	}
-}
+}	
 .imgAvantFooter{
 	width:100%;
 	display:block;
