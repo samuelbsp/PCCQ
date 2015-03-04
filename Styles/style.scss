@@ -60,6 +60,11 @@ p,a,li{
 	position:relative;
 	z-index:1;
 	overflow:hidden;
+	@media #{$mobile690}{
+        height: auto;
+        overflow: visible;
+        display: block;
+    }
 }
 .bordureMobile{
 	height:1px;
@@ -127,7 +132,6 @@ header{
 	    		display:none;
 	    		overflow:hidden;
 	    		@include transition(500ms);
-	    		overflow-y:scroll;
 			}
 			a {
 			color: inherit;
@@ -801,12 +805,34 @@ footer{
 /*/================/*/
 /*/ CONTENU FILM  /*/
 /*/==============/*/
+#backgroundPageFilm1{
+	background-image:url(Styles/Images/imgAccueil.jpg);
+	@media #{$tablet}{
+		height: auto;
+	}
+    @media #{$mobile}{
+        height: auto;
+        background-image:none;
+    } 
+}
 .blocFilm{
 	min-height:800px;
 	width:93%;
 	position:relative;
 	top:150px;
 	left:7%;
+	@media #{$tablet}{
+		display:block;
+		margin-top:140px;
+		top:0;
+		left:3%;
+	} 
+    @media #{$mobile}{
+        top:0;
+        left:0;
+        width:100%;
+        margin-top:500px;
+    }
 	.blocTitre{
 		width:30%;
 		height:60px;
@@ -815,6 +841,16 @@ footer{
 		padding:10px 2%;
 		position:relative;
 		@include transition(300ms);
+		@media #{$tablet}{
+			left:0px;
+			width:40%;
+	        display:block;
+	        margin:0 auto;
+		}
+    	@media #{$mobile}{
+	        margin: 0 auto;
+	        width:100%;
+    	}
 		h2{
 			font-size:$bigFont;
 			text-align:center;
@@ -830,6 +866,16 @@ footer{
 		font-size:$standardFont;
 		overflow-y:auto;
 		@include transition(300ms);
+		@media #{$tablet}{
+			bottom:0px;
+			width:100%;
+			height:auto;
+		}
+	    @media #{$mobile}{
+	        width: 100%;
+	        margin:0 auto;
+	        height: auto;
+	    }
 		.blocInfoFilm{
 			width:100%;
 			height:auto;
@@ -848,11 +894,26 @@ footer{
 		overflow:hidden;
 		padding:0;
 		@include transition(300ms);
+		@media #{$tablet}{
+			width:75%;
+			padding:0.8%;
+		}
+    	@media #{$mobile}{
+	        width:100%;
+	        float:none;
+	        clear:both;
+    	} 
 		iframe{
 			width:100%;
 			height:100%;
 			opacity:0;
 			@include transition(1000ms);
+			@media #{$tablet}{
+				opacity:1;
+			}
+			@media #{$mobile}{
+				opacity:1;
+			}
 		}
 	}
 	.blocVote{
@@ -864,6 +925,15 @@ footer{
 		overflow:hidden;
 		text-align:center;
 		@include transition(300ms);
+		@media #{$tablet}{
+			width:180px;
+		}
+		@media #{$mobile}{
+			width:180px;
+			display:block;
+			float:none;
+            margin: 0 auto 20px auto;
+        }
 		.plus{
 			font-size:7em;
 			width:30%;
