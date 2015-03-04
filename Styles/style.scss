@@ -365,7 +365,7 @@ header{
 	}
 	.filmHover:hover{
 		.blocTitreFilms{
-			top:-10%;
+			top:40%;
 			color:$orange;
 			@include transition(500ms);
 		}
