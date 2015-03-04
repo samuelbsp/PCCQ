@@ -73,7 +73,6 @@ p,a,li{
 header{
 	height:100%;
 	width:100%;
-	background-image:url('Styles/Images/imgAccueil.jpg');
 	background-size:cover;
 	background-position:center;
 	float:left;
@@ -234,7 +233,6 @@ header{
 .blocObjectif{
 	width:100%;
 	height:auto;
-	background-image:url('Styles/Images/bg_objectif.jpg');
 	background-size:cover;
 	overflow:hidden;
 	@media #{$mobile} {
@@ -447,7 +445,6 @@ header{
 	position:relative;
 	width:100%;
 	height:642px;
-	background-image:url(Styles/Images/nouvelleImg.jpg);
 	background-size:cover;
 	background-position:center;
 	
@@ -767,9 +764,6 @@ footer{
 		}
 	}
 }
-#backgroundPageContenu{
-	background-image:url(Styles/Images/imgAccueil.jpg);
-}
 .blocContenu{
 	width:50%;
 	height:550px;
@@ -814,7 +808,6 @@ footer{
 /*/================/*/
 /*/ CONTENU FILM  /*/
 /*/==============/*/
-#backgroundPageFilm1{background-image:url(Styles/Images/imgAccueil.jpg);}
 .blocFilm{
 	min-height:800px;
 	width:93%;
