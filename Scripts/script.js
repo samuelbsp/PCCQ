@@ -33,17 +33,11 @@ jQuery.fn.rotate = function(degrees) {
       $( ".navHeader" ).css( "max-height", "0px" );
       $('.burgerMobile').rotate(0);
       menuMobileOuvert=false;
-      setTimeout(function() {
-        $( ".navHeader" ).css( "display", "none" );
-      }, 500);
     }
     else{
-      $( ".navHeader" ).css( "display", "block" );
-      setTimeout(function() {
-        $( ".navHeader" ).css( "max-height", "500px" );
-        $('.burgerMobile').rotate(90);
-        menuMobileOuvert=true;
-      }, 100);
+      $( ".navHeader" ).css( "max-height", "500px" );
+      $('.burgerMobile').rotate(90);
+      menuMobileOuvert=true;
     }
   });
 if( largeurFenetre<=780 ) {

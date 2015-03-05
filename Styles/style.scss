@@ -110,7 +110,9 @@ header{
 		.burgerMobile{
 			display:none;
 			float:right;
-		   	width:50px;
+		  width:50px;
+		  height: 28px;
+		  cursor: pointer;
 			@include transition(500ms);
 			@media #{$mobile} {
 		    	display:block;
@@ -125,11 +127,12 @@ header{
 			padding:0;
 			text-align:right;
 			@media #{$mobile} {
+	    		position: absolute;
+					left: 0;
 	    		width:100%;
 	    		background-color:#141414;
 	    		height:auto;
 	    		max-height:0px;
-	    		display:none;
 	    		overflow:hidden;
 	    		@include transition(500ms);
 			}
@@ -470,7 +473,7 @@ header{
 		width:60%;
 		right:0;
 		bottom:0;
-		padding:30px 4% 50px;
+		padding:30px 4% 40px;
 		@media #{$mobile} {
 		    display:block;
 		    width:100%;
