@@ -566,15 +566,15 @@ header{
         	height:1px;
 					width:70%;
 					margin:0 auto;
-					background-color:$orange
+					background-color:$orange;
+						@media #{$mobile} {
+						   	display:block;
+						   	clear:both;
+						}
         }
 
-        & + &:after{
+        & + .nouvellesFacebook:after{
 					display:none;
-					@media #{$mobile} {
-					   	display:block;
-					   	clear:both;
-					}
 				}
     }
 }	
