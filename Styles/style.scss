@@ -504,13 +504,7 @@ header{
 			padding-top:50px;
 		}	
 	}
-	.nouvellesFacebook + .nouvellesFacebook .bordureMobile{
-		display:none;
-		@media #{$mobile} {
-		   	display:block;
-		   	clear:both;
-		}
-	}
+	
 
 	.nouvellesFacebook {
         width: 50%;
@@ -564,10 +558,25 @@ header{
             font-size: $littleFont;
             line-height: 25px;
         }
+
+        &:after {
+        	content: '';
+        	position:relative;
+        	top: 70px;
+        	height:1px;
+					width:70%;
+					margin:0 auto;
+					background-color:$orange
+        }
+
+        & + &:after{
+					display:none;
+					@media #{$mobile} {
+					   	display:block;
+					   	clear:both;
+					}
+				}
     }
-	.bordureMobile{
-		display:none;
-	}
 }	
 .imgAvantFooter{
 	margin-top:30px;
