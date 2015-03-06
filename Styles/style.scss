@@ -92,7 +92,7 @@ header{
 		background-size:100% 100%;
 		float:right;
 
-		@media #{$mobile} {
+		@media #{$tablet} {
 	    	height:80px;
 		    background-image:none;
 		    background-color:#141414;
@@ -103,7 +103,7 @@ header{
 		.logoHeader{
 			width:185px;
 			margin-top:14px;
-			@media #{$mobile} {
+			@media #{$tablet} {
 		    	margin-top:10px;
 			}
 		}
@@ -114,7 +114,7 @@ header{
 		  height: 28px;
 		  cursor: pointer;
 			@include transition(500ms);
-			@media #{$mobile} {
+			@media #{$tablet} {
 		    	display:block;
 		    	margin-top:15px;
 			}
@@ -126,7 +126,7 @@ header{
 			float:right;
 			padding:0;
 			text-align:right;
-			@media #{$mobile} {
+			@media #{$tablet} {
 	    		position: absolute;
 					left: 0;
 	    		width:100%;
@@ -154,7 +154,7 @@ header{
 				font-size:$littleFont;
 				font-family: 'bebas_neueregular';
 				@include transition(300ms);
-				@media #{$mobile} {
+				@media #{$tablet} {
 	    			width:100%;
 	    			border:white;
 	    			text-align:center;
@@ -163,7 +163,7 @@ header{
 			}
 			.menu-item-has-children:last-child{
 				margin-right:0%;
-				@media #{$mobile} {
+				@media #{$tablet} {
 	    			padding:15px 0 15px 0;
 				}
 			}
@@ -172,7 +172,7 @@ header{
 				position:relative;
 				background-color:white;
 				@include transition(300ms);
-				@media #{$mobile} {
+				@media #{$tablet} {
 					background-color:#141414;
 					color:white;
 				}
@@ -193,7 +193,7 @@ header{
 				overflow:hidden;
 				background-color:rgba(255,255,255,0.8);
 				@include transition(500ms);
-				@media #{$mobile} {
+				@media #{$tablet} {
 		    		position:relative;
 		    		display:block;
 		    		width:100%;
@@ -205,7 +205,7 @@ header{
 					border-top:1px solid #d1d1d1;
 					border-bottom:1px solid #d1d1d1;
 					@include transition(300ms);
-					@media #{$mobile} {
+					@media #{$tablet} {
 		    			width:100%;
 		    			padding:15px 0 15px 0;
 					}
@@ -214,7 +214,7 @@ header{
 					background-color:$orange;
 					color:white;
 					@include transition(300ms);
-					@media #{$mobile} {
+					@media #{$tablet} {
 		    			background-color:#141414;
 					}
 				}
