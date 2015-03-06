@@ -281,8 +281,11 @@ header{
 		display:block;
 		background-color:white;
 		position:absolute;
-		@media #{$mobile} {
+		@media #{$tablet} {
 		    display:none;
+		}
+		@media #{$mobile} {
+	    display:none;
 		}
 	}
 	.moinPetiteBordureGauche{
@@ -336,6 +339,11 @@ header{
 			position:relative;
 			z-index: 2;
 			@include transition(500ms);
+			h3 {
+				@media #{$tablet} {
+			    display: inline-block;
+				}
+			}
 		}
 		.petiteSousBordure{
 			position:relative;
@@ -343,6 +351,7 @@ header{
 			width:45%;
 			bottom:-250px;
 			@include transition(500ms);
+			
 		}
 		.grandeSousBordure{
 			position:relative;
