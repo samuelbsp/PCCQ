@@ -829,6 +829,14 @@ footer{
 		line-height:20px;
 		font-size:$standardFont;
 	}
+	img{
+		width: 100%;
+		height: auto;
+		margin: 1em 0
+	}
+	strong{
+		font-weight: bold;
+	}
 }
 /*/================/*/
 /*/ CONTENU FILM  /*/
