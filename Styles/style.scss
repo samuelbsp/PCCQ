@@ -742,7 +742,7 @@ footer{
 				float:none;
 				text-align:center;
 				clear:both;
-				padding:20px 0;
+				padding:7px 0 20px;
 			}
 		}
 		.blocReseauSociaux{
@@ -841,6 +841,42 @@ footer{
 		font-weight: bold;
 	}
 }
+
+/*/================/*/
+/*/ Communiqués /*/
+/*/==============/*/
+
+.blocCommunique{
+    img{
+    	float: left;
+    	width:40%;
+    	height: auto;
+    	margin: 5px 3% 20px 0;
+    	&:first-of-type{
+    		margin: 25px 3% 20px 0;
+    	}
+    }
+    h3{
+    	margin: 15px 0 10px 0;
+    }
+    p.co-date{
+    	margin-top: 20px;
+    	font-size: $veryLittleFont;
+    }
+    strong{
+    	font-weight:bold;
+    }
+    hr{
+    	display: block;
+    	height: 1px;
+    	border: 0; 
+    	border-top: 1px solid $orange;
+    	margin: 2em 0;
+    	padding: 0;
+    	clear: both;
+    }
+}
+
 /*/================/*/
 /*/ CONTENU FILM  /*/
 /*/==============/*/
