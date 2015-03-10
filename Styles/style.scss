@@ -60,8 +60,8 @@ p,a,li{
 	position:relative;
 	z-index:1;
 	overflow:hidden;
-	@media #{$mobile690}{
-        height: auto;
+	@media #{$mobile}{
+        height: auto !important;
         overflow: visible;
         display: block;
     }
@@ -511,13 +511,14 @@ header{
 		text-align:center;
 		position:relative;
 		@media #{$mobile} {
-		    display:block;
+		  display:block;
 		}
 		h2{
 			color:white;
 			font-size:$bigFont;
 			padding-top:50px;
-		}	
+		}
+			
 	}
 	
 
@@ -592,6 +593,9 @@ header{
 					display:none;
 				}
     }
+  @media #{$mobile} {
+	  padding-bottom: 50px;
+	}
 }	
 .imgAvantFooter{
 	margin-top:30px;
@@ -738,7 +742,7 @@ footer{
 				float:none;
 				text-align:center;
 				clear:both;
-				padding-top:20px;
+				padding:20px 0;
 			}
 		}
 		.blocReseauSociaux{
@@ -808,10 +812,9 @@ footer{
     @media #{$mobile}{
         background-color: white;
         width: 100%;
-        height: 100% !important;
-        left: 0;
-        bottom: 0;
-        padding: 10%;
+        height: auto !important;
+        position: static;
+        padding: 80px 10% 10%;
     }
 
 	h2{
