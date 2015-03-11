@@ -2,8 +2,8 @@ $(document).ready(function() {
 
   var hauteurFenetre = $(window).height();
   var largeurFenetre = $(window).width();	
-  $( ".blocContenu" ).css( "height", hauteurFenetre-180);
-  if( largeurFenetre >=1023 ) { 
+  if( largeurFenetre >=1023 ) {
+    $( ".blocContenu" ).css( "height", hauteurFenetre-180);
     $( ".blocTitre" ).css( "left", - largeurFenetre);
     $( ".blocContenuFilm" ).css( "bottom", - hauteurFenetre);
     $( ".blocFilm" ).css( "top", hauteurFenetre/4.5);
@@ -160,6 +160,7 @@ function logoCentre(){
             var ul = $('<ul>').appendTo(wall);
 
             // Généré le modèle:
+            if($('#feedTpl')!=undefined)
             $('#feedTpl').tmpl(fb.posts).appendTo(ul);
         });
 

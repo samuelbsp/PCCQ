@@ -60,6 +60,9 @@ p,a,li{
 	position:relative;
 	z-index:1;
 	overflow:hidden;
+	@media #{$tablet}{
+		height:100%;
+	}
 	@media #{$mobile}{
         height: auto !important;
         overflow: visible;
