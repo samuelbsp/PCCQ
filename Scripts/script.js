@@ -44,8 +44,9 @@ if( largeurFenetre<=780 ) {
    var monID;
    var subMenuOuvert=false;
   $( ".menu-item-has-children" ).click(function(e) {
-    console.log(e)
-    e.preventDefault();
+    if (e.target.parentElement.indexOf('.menu-item-has-children')>-1){
+      e.preventDefault();
+    }  
     monID= this.id;
     if(subMenuOuvert==false){
       $( '#' + monID + ' .sub-menu' ).css( "max-height", "500px" );
