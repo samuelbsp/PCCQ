@@ -44,6 +44,7 @@ if( largeurFenetre<=780 ) {
    var monID;
    var subMenuOuvert=false;
   $( ".menu-item-has-children" ).click(function(e) {
+    console.log(e)
     e.preventDefault();
     monID= this.id;
     if(subMenuOuvert==false){
