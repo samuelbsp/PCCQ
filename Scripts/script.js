@@ -16,6 +16,15 @@ $( window ).resize(function() {
   hauteurFenetre = $(window).height();
   largeurFenetre = $(window).width(); 
   animationContenuFilm();
+  if( largeurFenetre >=1023 ) {
+    $( ".blocContenu" ).css( "height", hauteurFenetre-180);
+    $( ".blocTitre" ).css( "left", - largeurFenetre);
+    $( ".blocContenuFilm" ).css( "bottom", - hauteurFenetre);
+    $( ".blocFilm" ).css( "top", hauteurFenetre/4.5);
+    $( ".backgroundContenu" ).css( "height", hauteurFenetre);
+  } else {
+    $( ".blocFilm" ).css( "top", '');
+  }
 });  
 
   var rotation = 0;
@@ -88,6 +97,7 @@ function animationContenuFilm(){
   if( largeurFenetre >=1023 ) {
     setTimeout(function() {
         $( ".blocTitre" ).css( "left", "0px" );
+        $(".blocTitre").addClass("animated");
             setTimeout(function() {
               $( ".blocContenuFilm" ).css( "bottom", "0px" );
                 setTimeout(function() {
@@ -101,7 +111,10 @@ function animationContenuFilm(){
         }, 300);
     }, 100);
   }
-  if( largeurFenetre <1023 ) {
+  if( largeurFenetre < 1023 ) {
+    if( $(".blocTitre").hasClass("animated") ) {
+      !$(".blocTitre").removeClass("animated")
+    }
     $( ".blocTitre" ).css( "left", "" );
     $( ".blocContenuFilm" ).css( "bottom", "" );
     $( ".blocVideo" ).css( "width", "" );
@@ -178,8 +191,8 @@ function logoCentre(){
             var ul = $('<ul>').appendTo(wall);
 
             // Généré le modèle:
-            if($('#feedTpl')!=undefined)
-            $('#feedTpl').tmpl(fb.posts).appendTo(ul);
+            if($('#feedTpl')[0] != undefined)
+              $('#feedTpl').tmpl(fb.posts).appendTo(ul);
         });
 
         return this;
