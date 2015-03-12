@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
   var hauteurFenetre = $(window).height();
-  var largeurFenetre = $(window).width();	
+  var largeurFenetre = $(window).width(); 
   if( largeurFenetre >=1023 ) {
     $( ".blocContenu" ).css( "height", hauteurFenetre-180);
     $( ".blocTitre" ).css( "left", - largeurFenetre);
@@ -60,7 +60,8 @@ if( largeurFenetre<=780 ) {
    var monID;
    var subMenuOuvert=false;
   $( ".menu-item-has-children" ).click(function(e) {
-    if (e.target.parentElement.indexOf('.menu-item-has-children')>-1){
+    if (e.target.parentElement.classNanem.indexOf('menu-item-has-children') !== -1 &&
+        e.target.parentElement.classNanem.indexOf('texteOrange') == -1){
       e.preventDefault();
     }  
     monID= this.id;

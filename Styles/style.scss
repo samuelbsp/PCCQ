@@ -822,7 +822,7 @@ footer{
 
 	h2{
 		font-size:$smallFont;
-		margin-bottom:10px;
+		margin-bottom:15px;
 		@media #{$mobile}{
             padding-top: 40px;
         }
@@ -835,6 +835,7 @@ footer{
 	p{
 		line-height:20px;
 		font-size:$standardFont;
+		margin-bottom: 10px;
 	}
 	img{
 		max-width: 100%;
