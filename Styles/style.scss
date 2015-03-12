@@ -822,6 +822,7 @@ footer{
 
 	h2{
 		font-size:$smallFont;
+		margin-bottom:10px;
 		@media #{$mobile}{
             padding-top: 40px;
         }

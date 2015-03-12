@@ -9,6 +9,7 @@ $(document).ready(function() {
     $( ".blocFilm" ).css( "top", hauteurFenetre/4.5);
     $( ".backgroundContenu" ).css( "height", hauteurFenetre);
   }
+  var animated=false;
 
 animationContenuFilm();
 
@@ -18,8 +19,6 @@ $( window ).resize(function() {
   animationContenuFilm();
   if( largeurFenetre >=1023 ) {
     $( ".blocContenu" ).css( "height", hauteurFenetre-180);
-    $( ".blocTitre" ).css( "left", - largeurFenetre);
-    $( ".blocContenuFilm" ).css( "bottom", - hauteurFenetre);
     $( ".blocFilm" ).css( "top", hauteurFenetre/4.5);
     $( ".backgroundContenu" ).css( "height", hauteurFenetre);
   } else {
@@ -94,10 +93,10 @@ setTimeout(function() {
 }, 100);
 
 function animationContenuFilm(){
-  if( largeurFenetre >=1023 ) {
+  if( largeurFenetre >=1023 && animated==false) {
+    animated=true;
     setTimeout(function() {
         $( ".blocTitre" ).css( "left", "0px" );
-        $(".blocTitre").addClass("animated");
             setTimeout(function() {
               $( ".blocContenuFilm" ).css( "bottom", "0px" );
                 setTimeout(function() {
@@ -112,9 +111,7 @@ function animationContenuFilm(){
     }, 100);
   }
   if( largeurFenetre < 1023 ) {
-    if( $(".blocTitre").hasClass("animated") ) {
-      !$(".blocTitre").removeClass("animated")
-    }
+    animated=false;
     $( ".blocTitre" ).css( "left", "" );
     $( ".blocContenuFilm" ).css( "bottom", "" );
     $( ".blocVideo" ).css( "width", "" );
