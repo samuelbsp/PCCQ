@@ -1,14 +1,14 @@
 $(document).ready(function() {
 
   var hauteurFenetre = $(window).height();
-  var largeurFenetre = $(window).width(); 
+  var largeurFenetre = $(window).width();
 
-  $( ".blocContenu" ).css( "height", hauteurFenetre-180);
-  if( largeurFenetre >=1023 ) {
+  $( ".blocContenu" ).css( "height", hauteurFenetre-180); 
+  $( ".backgroundContenu" ).css( "height", hauteurFenetre);
+  if( largeurFenetre > 1024 ) {
     $( ".blocTitre" ).css( "left", - largeurFenetre);
     $( ".blocContenuFilm" ).css( "bottom", - hauteurFenetre);
     $( ".blocFilm" ).css( "top", hauteurFenetre/4.5);
-    $( ".backgroundContenu" ).css( "height", hauteurFenetre);
   }
   var animated=false;
 
@@ -18,10 +18,11 @@ $( window ).resize(function() {
   hauteurFenetre = $(window).height();
   largeurFenetre = $(window).width(); 
   animationContenuFilm();
-  if( largeurFenetre >=1023 ) {
-    $( ".blocContenu" ).css( "height", hauteurFenetre-180);
+
+  $( ".blocContenu" ).css( "height", hauteurFenetre-180);
+  $( ".backgroundContenu" ).css( "height", hauteurFenetre);
+  if( largeurFenetre > 1024 ) {
     $( ".blocFilm" ).css( "top", hauteurFenetre/4.5);
-    $( ".backgroundContenu" ).css( "height", hauteurFenetre);
   } else {
     $( ".blocFilm" ).css( "top", '');
   }
@@ -57,13 +58,14 @@ jQuery.fn.rotate = function(degrees) {
       menuMobileOuvert=true;
     }
   });
-if( largeurFenetre<=780 ) {
+if( largeurFenetre<=1024 ) {
    var monID;
    var subMenuOuvert=false;
   $( ".menu-item-has-children" ).click(function(e) {
-    if (e.target.parentElement.classNanem.indexOf('menu-item-has-children') !== -1 &&
-        e.target.parentElement.classNanem.indexOf('texteOrange') == -1){
       e.preventDefault();
+    if (e.target.parentElement.className.indexOf('menu-item-has-children') == -1 ||
+        e.target.parentElement.className.indexOf('texteOrange') != -1){
+      window.location = e.target.href;
     }  
     monID= this.id;
     if(subMenuOuvert==false){
@@ -95,7 +97,7 @@ setTimeout(function() {
 }, 100);
 
 function animationContenuFilm(){
-  if( largeurFenetre >=1023 && animated==false) {
+  if( largeurFenetre > 1024 && animated==false) {
     animated=true;
     setTimeout(function() {
         $( ".blocTitre" ).css( "left", "0px" );
@@ -112,7 +114,7 @@ function animationContenuFilm(){
         }, 300);
     }, 100);
   }
-  if( largeurFenetre < 1023 ) {
+  if( largeurFenetre <= 1024 ) {
     animated=false;
     $( ".blocTitre" ).css( "left", "" );
     $( ".blocContenuFilm" ).css( "bottom", "" );

@@ -336,6 +336,8 @@ header{
 			width:100%;
 			text-align:center;		
 			top:50%;
+			-webkit-transform:translateY(-50%);
+			-ms-transform:translateY(-50%);
 			transform:translateY(-50%);
 			text-transform: uppercase;
 			font-size:1.5em;
@@ -844,6 +846,9 @@ footer{
 	}
 	strong{
 		font-weight: bold;
+	}
+	a{
+		word-break: break-word;
 	}
 }
 
