@@ -328,6 +328,7 @@ header{
 		font-size:$mediumFont;
 		overflow:hidden;
 		position:relative;
+		text-decoration: none;
 		@include transition(500ms);
 		@media #{$mobile} {
 		    width:100%;
@@ -888,8 +889,7 @@ footer{
 /*/================/*/
 /*/ CONTENU FILM  /*/
 /*/==============/*/
-#backgroundPageFilm1{
-	background-image:url(Styles/Images/imgAccueil.jpg);
+.backgroundContenuFilm{
 	@media #{$tablet}{
 		height: auto;
 	}
@@ -980,11 +980,13 @@ footer{
 		@media #{$tablet}{
 			width:75%;
 			padding:0.8%;
+			margin-bottom: 20px;
 		}
     	@media #{$mobile}{
 	        width:100%;
 	        float:none;
 	        clear:both;
+	        margin: 0;
     	} 
 		iframe{
 			width:100%;
@@ -1010,7 +1012,7 @@ footer{
 		text-decoration: none;
 		@include transition(300ms);
 		@media #{$tablet}{
-			width:180px;
+			width:25%;
 		}
 		@media #{$mobile}{
 			width:100%;
