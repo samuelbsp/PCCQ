@@ -18,6 +18,9 @@ $( window ).resize(function() {
   hauteurFenetre = $(window).height();
   largeurFenetre = $(window).width(); 
   animationContenuFilm();
+  if($(".blocObjectif").length > 0) {
+    logoCentre();
+  }
 
   $( ".blocContenu" ).css( "height", hauteurFenetre-180);
   $( ".backgroundContenu" ).css( "height", hauteurFenetre);
@@ -129,6 +132,7 @@ function logoCentre(){
   var hauteurMargeLogo = $(window).height()/2- $( ".blocTitre" ).height()/2;
   $( ".blocTitre" ).css( "margin-top", hauteurMargeLogo);
 }
+
 });
 
 (function($){

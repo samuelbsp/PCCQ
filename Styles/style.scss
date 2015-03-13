@@ -125,7 +125,6 @@ header{
 		.navHeader{
 			list-style:none;
 			height:100%;
-			width:80%;
 			float:right;
 			padding:0;
 			text-align:right;
@@ -152,7 +151,7 @@ header{
 				color:white;
 				font-size:1.5em;
 				margin-top:10px;
-				padding:25px 2%;
+				//padding:25px 2%;
 				font-weight:1;
 				font-size:$littleFont;
 				font-family: 'bebas_neueregular';
@@ -161,14 +160,17 @@ header{
 	    			width:100%;
 	    			border:white;
 	    			text-align:center;
-	    			padding:15px 0 0 0;
+				}
+				a {
+					padding: 25px 15px;
+					display: block;
+					@media #{$tablet} {
+	    			padding: 15px;
+					}
 				}
 			}
 			.menu-item-has-children:last-child{
 				margin-right:0%;
-				@media #{$tablet} {
-	    			padding:15px 0 15px 0;
-				}
 			}
 			.menu-item-has-children:hover{
 				color:black;
@@ -204,13 +206,16 @@ header{
 		    		text-align:center;
 				}
 				li{
-					padding:15px 3% 15px 10%;
 					border-top:1px solid #d1d1d1;
 					border-bottom:1px solid #d1d1d1;
+					width:100%;
 					@include transition(300ms);
-					@media #{$tablet} {
-		    			width:100%;
-		    			padding:15px 0 15px 0;
+					a {
+						padding: 15px;
+						width: 100%;
+						@media #{$tablet} {
+		    			padding: 15px 0;
+						}
 					}
 				}
 				li:hover{
@@ -221,8 +226,6 @@ header{
 		    			background-color:#141414;
 					}
 				}
-				li:first-child{border-top:0px;}
-				li:last-child{border-bottom:0px;}
 			}
 		}
 	}
@@ -789,13 +792,8 @@ footer{
 	top:0px;
 	z-index:5;
 
-	.blocNavigation{
-		background-image:none;
-		background-color:rgba(0,0,0,0.5);
-		
-		.navHeader{
-			padding:0 0;
-		}
+	.blocNavigation .navHeader{
+		padding:0 0;
 	}
 }
 .blocContenu{
