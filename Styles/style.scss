@@ -94,6 +94,8 @@ header{
 		background-repeat:repeat-x;
 		background-size:100% 100%;
 		float:right;
+		position: relative;
+		z-index: 1000;
 
 		@media #{$tablet} {
 	    	height:80px;
@@ -454,12 +456,10 @@ header{
 			}
 		}
 		.logo{
-			width:14%;
 			max-width:100%;
 			margin:0 2%;
 			vertical-align: middle;
 			@media #{$mobile} {
-		    	width:27%;
 		    	margin:15px 3%;
 			}
 		}
@@ -486,6 +486,7 @@ header{
 			color:white;
 			font-size:$bigFont;
 			padding-top:50px;
+			margin-top: 0;
 		}	
 	}
 	.blocNouvellePCCQ{
@@ -694,7 +695,7 @@ footer{
 		   		height:auto;
 		   		display:block;
 		   		float:none;
-		   		margin-top:70px;
+		   		margin:30px 0;
 			}
 
 			h3{	
@@ -716,6 +717,17 @@ footer{
 				border:0px;
 				@media #{$mobile} {
 		   			padding:25px 7px;
+				}
+			}
+			button {
+				font-size: 1.6em;
+				border: 0;
+				padding: 2px 5%;
+				background-color: #CB601F;
+				color: #fff;
+				@media #{$mobile} {
+		   			padding:8px 5%;
+		   			font-size: 1.7em;
 				}
 			}
 			img{
@@ -1054,4 +1066,49 @@ footer{
 			@include transition(500ms);
 		}
 	}
+}
+
+.films-en-lice p {
+  margin: 0;
+}
+
+.films-en-lice p strong {
+  font-size: 20px;
+}
+
+.films-en-lice hr {
+  border: 0;
+  border-top: 1px solid #eb6d20;
+  margin-bottom: 20px;
+}
+
+.films-en-lice hr:last-of-type {
+  border: 0;
+}
+
+.films-en-lice img {
+  margin: 20px 0;
+}
+
+.synopsis {
+  padding: 20px 0;
+}
+
+#carousel-accueil {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+#carousel-accueil,
+#carousel-accueil .carousel-inner,
+#carousel-accueil .carousel-inner .item {
+	height: 100%;
+}
+
+#carousel-accueil .carousel-inner .item {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
 }
